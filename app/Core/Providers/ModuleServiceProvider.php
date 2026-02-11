@@ -20,8 +20,7 @@ class ModuleServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        // We will register module service providers here if they define any.
-        $this->discoverAndRegisterModules();
+        //
     }
 
     /**
@@ -29,7 +28,7 @@ class ModuleServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $this->discoverAndRegisterModules();
     }
 
     /**

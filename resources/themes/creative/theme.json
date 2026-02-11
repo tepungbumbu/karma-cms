@@ -1,0 +1,12 @@
+{
+    "name": "Creative",
+    "slug": "creative",
+    "version": "1.0.0",
+    "description": "Bold, artistic theme with dark mode and masonry layouts",
+    "author": "Karma Team",
+    "features": ["dark_mode", "animations", "masonry"],
+    "widget_areas": [
+        {"id": "sidebar", "name": "Creative Sidebar"},
+        {"id": "footer", "name": "Footer Widgets"}
+    ]
+}

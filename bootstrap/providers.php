@@ -1,5 +1,7 @@
 <?php
 
 return [
-    App\Providers\AppServiceProvider::class,
+    App\Providers\RouteServiceProvider::class,
+    App\Core\Providers\ModuleServiceProvider::class,
+    App\Core\Providers\ThemeServiceProvider::class,
 ];

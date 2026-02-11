@@ -13,6 +13,9 @@ return Application::configure(basePath: dirname(__DIR__))
         then: function () {
             Route::middleware('web')
                 ->group(base_path('routes/install.php'));
+
+            Route::middleware(['web', 'auth'])  // Assuming auth is handled later
+                ->group(base_path('routes/admin.php'));
         },
     )
     ->withMiddleware(function (Middleware $middleware) {
