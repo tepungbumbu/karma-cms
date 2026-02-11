@@ -1,0 +1,28 @@
+{
+  "name": "Blog",
+  "slug": "blog",
+  "version": "2.0.0",
+  "description": "Advanced blogging with SEO, categories, tags, comments",
+  "author": "KarmaCMS Team",
+  "license": "MIT",
+  "requires": {
+    "php": "^8.2",
+    "karma": "^1.0",
+    "modules": ["Core", "Media", "User"]
+  },
+  "installable": true,
+  "has_settings": true,
+  "has_demo_data": true,
+  "menu_position": 10,
+  "permissions": [
+    "blog.view", "blog.create", "blog.edit", "blog.delete", 
+    "blog.publish", "blog.category.manage", "blog.comment.moderate"
+  ],
+  "tables": ["posts", "categories", "tags", "post_tag", "comments"],
+  "assets": ["css/blog.css", "js/blog.js"],
+  "widgets": ["recent_posts", "popular_posts", "categories_cloud"],
+  "hooks": {
+    "after_install": "Karma\\Blog\\Hooks\\InstallHook",
+    "before_uninstall": "Karma\\Blog\\Hooks\\UninstallHook"
+  }
+}
