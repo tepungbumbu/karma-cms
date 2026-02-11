@@ -1,12 +1,12 @@
-# Nexus CMS - Professional Web Installer & Modular Architecture
+# Karma CMS - Professional Web Installer & Modular Architecture
 
 > **Phase 1: Core Architecture & Web Installer System**
 
-Nexus CMS is a powerful, production-ready Laravel 11 CMS designed specifically for high-performance modular applications and optimized for shared hosting environments (DirectAdmin/cPanel).
+Karma CMS is a powerful, production-ready Laravel 11 CMS designed specifically for high-performance modular applications and optimized for shared hosting environments (DirectAdmin/cPanel).
 
 ## 🚀 Phase 1 Overview: Core Infrastructure
 
-The first phase of Nexus CMS focuses on building a rock-solid foundation that allows for plug-and-play modules and a seamless web-based installation process.
+The first phase of Karma CMS focuses on building a rock-solid foundation that allows for plug-and-play modules and a seamless web-based installation process.
 
 ### 🛠 Key Components
 
