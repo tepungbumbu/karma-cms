@@ -1,0 +1,33 @@
+{
+  "name": "Ecommerce",
+  "slug": "ecommerce",
+  "version": "1.0.0",
+  "description": "Enterprise-grade Ecommerce platform with multi-gateway and multi-shipping support.",
+  "author": "KarmaCMS Team",
+  "license": "MIT",
+  "requires": {
+    "php": "^8.2",
+    "karma": "^1.0",
+    "modules": ["Core", "Media", "User", "SEO", "Notification"]
+  },
+  "installable": true,
+  "has_settings": true,
+  "has_demo_data": true,
+  "menu_position": 15,
+  "permissions": [
+    "ecommerce.view", "ecommerce.create", "ecommerce.edit", "ecommerce.delete",
+    "ecommerce.order.manage", "ecommerce.payment.manage", "ecommerce.shipping.manage",
+    "ecommerce.coupon.manage", "ecommerce.review.manage", "ecommerce.report"
+  ],
+  "tables": [
+    "ecommerce_products", "ecommerce_product_variants", "ecommerce_categories", "ecommerce_brands",
+    "ecommerce_carts", "ecommerce_cart_items", "ecommerce_orders", "ecommerce_order_items",
+    "ecommerce_payments", "ecommerce_wishlists", "ecommerce_reviews", "ecommerce_coupons"
+  ],
+  "assets": ["css/ecommerce.css", "js/ecommerce.js"],
+  "widgets": ["order_stats", "recent_orders", "top_products", "low_stock_alerts"],
+  "hooks": {
+    "after_install": "Karma\\Ecommerce\\Hooks\\InstallHook",
+    "before_uninstall": "Karma\\Ecommerce\\Hooks\\UninstallHook"
+  }
+}

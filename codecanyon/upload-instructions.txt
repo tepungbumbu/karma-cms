@@ -1,0 +1,31 @@
+CodeCanyon Upload Instructions - KarmaCMS
+========================================
+
+1. Main Zip Structure:
+   -------------------
+   karma-cms-v1.0.zip
+   ├── documentation/     (Professional HTML Docs)
+   ├── source/            (Entire Laravel project, including vendor)
+   ├── sql/               (Demo data SQL dump)
+   └── README.txt         (Quick start instructions)
+
+2. Requirements for Envato:
+   ------------------------
+   - No hardcoded API keys.
+   - All code follows PSR-12 coding standard.
+   - PHP 8.2+ compatibility confirmed.
+   - No debug code (die, var_dump, etc.).
+
+3. Preview Assets:
+   ---------------
+   - Thumbnail: 80x80 jpeg/png
+   - Main Preview: 590x300 jpeg
+   - Screenshots: Zip of high-res images (1280x720)
+
+4. Final Checklist:
+   ---------------
+   [x] Unit and Feature Tests pass (Artisan test)
+   [x] Database migrations verified
+   [x] Security headers confirmed
+   [x] License checker placeholder removed
+   [x] TODO comments cleared

@@ -14,14 +14,26 @@ return Application::configure(basePath: dirname(__DIR__))
             Route::middleware('web')
                 ->group(base_path('routes/install.php'));
 
-            Route::middleware(['web', 'auth'])  // Assuming auth is handled later
+            Route::middleware(['web', 'auth'])
                 ->group(base_path('routes/admin.php'));
+            
+            Route::middleware('web')
+                ->group(base_path('routes/security.php'));
         },
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->append(\App\Http\Middleware\EnsureInstalled::class);
+        $middleware->append(\App\Http\Middleware\SecurityHeaders::class);
     })
     ->withExceptions(function (Exceptions $exceptions) {
-        //
+        $exceptions->report(function (\Throwable $e) {
+            if ($e instanceof \Exception) {
+                (new \App\Core\Services\LogManager())->log($e->getMessage(), [
+                    'file' => $e->getFile(),
+                    'line' => $e->getLine(),
+                    'trace' => $e->getTraceAsString()
+                ], 'error');
+            }
+        });
     })
     ->create();

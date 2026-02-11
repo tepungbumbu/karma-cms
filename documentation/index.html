@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KarmaCMS Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .sidebar { height: 100vh; position: sticky; top: 0; }
+        code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; font-family: monospace; }
+        pre { background: #1e293b; color: #f8fafc; padding: 1.5rem; border-radius: 8px; overflow-x: auto; margin: 1rem 0; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="w-64 bg-slate-900 text-white sidebar hidden md:block">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-8">KarmaCMS</h2>
+                <nav class="space-y-4">
+                    <a href="#intro" class="block hover:text-blue-400">Introduction</a>
+                    <a href="#install" class="block hover:text-blue-400">Installation</a>
+                    <a href="#modules" class="block hover:text-blue-400">Modules</a>
+                    <a href="#security" class="block hover:text-blue-400">Security</a>
+                    <a href="#api" class="block hover:text-blue-400">API</a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8 md:p-16 max-w-4xl mx-auto">
+            <section id="intro" class="mb-16">
+                <h1 class="text-4xl font-bold mb-4">Introduction</h1>
+                <p class="text-lg text-gray-600">KarmaCMS is an enterprise-grade, modular CMS built on Laravel 12. Designed for high performance on shared hosting and 100% marketplace ready.</p>
+            </section>
+
+            <section id="install" class="mb-16">
+                <h2 class="text-3xl font-bold mb-4">Installation</h2>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-bold mb-2">Web Installer</h3>
+                    <p class="mb-4">Simply upload the files to your server and visit <code>/install.php</code>. The installer will guide you through the process.</p>
+                    <h3 class="font-bold mb-2">Manual Installation</h3>
+                    <pre>
+composer install
+php artisan migrate --seed
+php artisan karma:post-install</pre>
+                </div>
+            </section>
+
+            <section id="modules" class="mb-16">
+                <h2 class="text-3xl font-bold mb-4">Core Modules</h2>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Blog</strong>: Complete content management system.</li>
+                    <li><strong>Ecommerce</strong>: Production-ready online store integration.</li>
+                    <li><strong>User</strong>: Robust authentication and profile management.</li>
+                </ul>
+            </section>
+
+            <footer class="mt-32 pt-8 border-t border-gray-200 text-center text-gray-500">
+                &copy; 2026 KarmaCMS. Built for the marketplace.
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
